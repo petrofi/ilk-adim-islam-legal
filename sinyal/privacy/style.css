@@ -1,0 +1,45 @@
+:root { color-scheme: light; --navy: #101d3a; --ink: #1c2c48; --muted: #485b76; --blue: #1750bf; --cyan: #59deee; --paper: #fff; --line: #d5dfed; }
+*, *::before, *::after { box-sizing: border-box; }
+html { background: #f4f7fc; scroll-padding-block-start: 1.5rem; }
+body { margin: 0; color: var(--ink); font: 1rem/1.8 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.shell { width: min(calc(100% - 3rem), 72rem); margin-inline: auto; }
+a { color: var(--blue); text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #af4b00; outline-offset: 4px; border-radius: 2px; }
+header { background: var(--navy); color: #fff; border-block-end: 3px solid var(--cyan); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.1rem; }
+header a { color: #e4eeff; padding: .45rem 0; }
+header a:focus-visible { outline-color: var(--cyan); }
+.wordmark { display: inline-flex; align-items: baseline; gap: .3rem; font-size: 1.5rem; font-weight: 800; letter-spacing: -.035em; }
+.signal-dot { width: .4rem; height: .4rem; border-radius: 50%; background: var(--cyan); }
+.hero { padding-block: 3rem 2rem; }
+h1 { margin: 0 0 .8rem; font-size: clamp(2rem, 5vw, 3.3rem); line-height: 1.25; color: var(--navy); overflow-wrap: anywhere; }
+h2 { margin: 0 0 .8rem; font-size: 1.35rem; line-height: 1.45; color: var(--navy); }
+p { margin: 0 0 1rem; }
+.intro { max-width: 48rem; color: var(--muted); font-size: 1.1rem; }
+.meta { color: var(--muted); font-size: .95rem; }
+.languages { display: flex; flex-wrap: wrap; gap: .5rem; margin-block-start: 1.5rem; }
+.languages a { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .95rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--paper); }
+.languages a[aria-current] { background: var(--blue); color: #fff; border-color: var(--blue); text-decoration: none; font-weight: 650; }
+.document-layout { display: grid; grid-template-columns: 16rem minmax(0, 1fr); align-items: start; gap: 2rem; padding-block-end: 3rem; }
+aside { position: sticky; top: 1.5rem; }
+.toc { border: 1px solid var(--line); background: #edf2fa; border-radius: .7rem; padding: .8rem 1rem; font-size: .95rem; }
+summary { font-weight: 700; cursor: pointer; padding-block: .3rem; }
+.toc ul { margin-block: .5rem 0; padding-inline-start: 1.1rem; }
+.toc li { padding-block: .25rem; line-height: 1.55; }
+.toc-mobile { display: none; }
+article { min-width: 0; padding: 2rem; background: var(--paper); border: 1px solid var(--line); border-radius: .9rem; }
+section + section { border-block-start: 1px solid var(--line); margin-block-start: 2rem; padding-block-start: 2rem; }
+section { scroll-margin-block-start: 1.5rem; overflow-wrap: anywhere; }
+ul { padding-inline-start: 1.4rem; margin-block: 0 1rem; }
+li + li { margin-block-start: .35rem; }
+.resources a { display: inline-block; padding-block: .3rem; min-height: 44px; }
+footer { border-block-start: 1px solid var(--line); color: var(--muted); padding-block: 1.5rem 2rem; }
+footer .shell { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+.skip-link { position: fixed; z-index: 2; inset-inline-start: 1rem; top: -6rem; background: white; padding: .6rem 1rem; }
+.skip-link:focus { top: 1rem; }
+[dir="rtl"] body { line-height: 1.95; }
+[dir="rtl"] .wordmark { letter-spacing: -.035em; }
+@media (max-width: 900px) { .document-layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } aside { position: static; } .toc-desktop { display: none; } .toc-mobile { display: block; } .toc ul { columns: 2; column-gap: 2rem; } .toc li { break-inside: avoid; } }
+@media (max-width: 540px) { .shell { width: calc(100% - 2rem); } .hero { padding-block-start: 2rem; } article { padding: 1.25rem; } .toc ul { columns: 1; } }
+@media print { html { background: white; } .shell { width: 100%; } header, aside, .languages, .skip-link, footer { display: none; } .document-layout { display: block; } article { border: 0; padding: 0; } a { color: inherit; } }
