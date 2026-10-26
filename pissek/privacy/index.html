@@ -25,9 +25,9 @@
       <h1>Gizlilik Politikası</h1>
       <p class="lead">Mutfağınızda size eşlik ederken, bilgilerinizin nasıl işlendiğini açıkça anlatmak istiyoruz.</p>
       <dl class="metadata">
-        <div><dt>Son güncelleme</dt><dd><time datetime="2026-10-25">25 Ekim 2026</time></dd></div>
+        <div><dt>Son güncelleme</dt><dd><time datetime="2026-10-27">27 Ekim 2026</time></dd></div>
         <div><dt>Yayıncı / geliştirici</dt><dd>darklove</dd></div>
-        <div><dt>Kapsam</dt><dd>Android · 0.3.0 geliştirme sürümü</dd></div>
+        <div><dt>Kapsam</dt><dd>Android · 0.3.1 geliştirme sürümü</dd></div>
       </dl>
     </div>
     <div class="highlights" aria-label="Gizliliğe kısa bakış">
@@ -60,9 +60,10 @@
         <section id="giris">
           <p class="section-number">01 / Giriş</p>
           <h2>Bu politika neyi kapsar?</h2>
-          <p>Bu politika, darklove tarafından geliştirilen <strong>Pişsek?</strong> yemek ve tarif uygulamasının Android sürümünde (<code>com.pissek.app</code>) bilgilerin nasıl işlendiğini açıklar. Google Play üzerinden sunulacak uygulamanın incelenen sürümü 0.3.0 geliştirme sürümüdür.</p>
+          <p>Bu politika, darklove tarafından geliştirilen <strong>Pişsek?</strong> yemek ve tarif uygulamasının Android sürümünde (<code>com.pissek.app</code>) bilgilerin nasıl işlendiğini açıklar. Google Play üzerinden sunulacak uygulamanın incelenen sürümü 0.3.1 geliştirme sürümüdür.</p>
           <p>Tarif keşfetme, favoriler, dolap, alışveriş listesi, pişirme adımları ve zamanlayıcılar için kullanıcı hesabı gerekmez. İncelenen uygulama kodunda geliştiriciye ait bir kullanıcı hesabı, bulut eşitleme veya kullanıcı kayıtlarını alan bir sunucu bağlantısı bulunmaz.</p>
-          <aside class="note"><strong>Geliştirme ve üretim ayrımı</strong><p>0.3.0 geliştirmesinde Google test kimlikleriyle reklam ve UMP entegrasyonu bulunur. Varsayılan üretim yapılandırmasında reklamlar kapalıdır. Test reklamlarının da ağ bağlantısı ve SDK veri işlemleri olabileceği aşağıda açıklanır.</p></aside>
+          <aside class="note"><strong>Geliştirme ve üretim ayrımı</strong><p>0.3.1 geliştirmesinde Google test kimlikleriyle reklam ve UMP entegrasyonu bulunur. Varsayılan üretim yapılandırmasında reklamlar kapalıdır. Test reklamlarının da ağ bağlantısı ve SDK veri işlemleri olabileceği aşağıda açıklanır.</p></aside>
+          <p>0.3.1 dahili test önizlemesi, mutfak doğrulaması bekleyen 12 tarifi açık uyarıyla test için gösterir; 38 taslak kapalı kalır. Bu önizleme normal üretim sürümünden ayrıdır. Hem normal release hem dahili önizleme AAB’sinde kullanım hakkı belirsiz örnek ses kayıtları bulunmaz; uygun cihaz sesi varsa Android TTS kullanılır.</p>
         </section>
         <section id="veri-sorumlusu">
           <p class="section-number">02 / Sorumluluk</p>
@@ -97,8 +98,8 @@
         <section id="reklamlar">
           <p class="section-number">05 / Reklam altyapısı</p>
           <h2>Reklamlar ve Google AdMob</h2>
-          <p>Projede Google Mobile Ads Next-Gen SDK 1.6.0 ve Google User Messaging Platform (UMP) 4.0.0 bulunur. İncelenen 0.3.0 geliştirmesinde debug ve QA yapılandırmaları Google’ın örnek reklam kimliklerini kullanır. UMP kontrolünden sonra reklam isteğine izin verildiğinde SDK başlatılabilir; ana sayfa ve favorilerde test banner reklamı istenebilir. Aktif pişirme, zamanlayıcı veya sesli anlatım sırasında banner uygunluğu engellenir. Test kimliklerinin bulunması, reklamın her cihazda başarıyla yüklendiği anlamına gelmez.</p>
-          <p>Varsayılan release yapılandırmasında canlı reklamlar kapalıdır ve yalnız bir derleme parametresiyle açılamaz. Pişsek?’e ait gerçek AdMob uygulama ve banner kimlikleri üretim yapılandırmasında ayrı tutulur; geliştirme ve QA paketleri yalnız Google test kimliklerini kullanır. Normal Rewarded üretim kimliği henüz yapılandırılmamıştır. Verilen farklı bir kimlik Rewarded Interstitial türündedir; bu özellik kapalıdır ve normal Rewarded API’sine verilmez. Etkin bir ödül ürünü veya reklam izleme düğmesi yoktur. Gerçek reklam trafiği için ayrıca yayıncı onayı ve gerekli yayın/gizlilik kontrolleri gerekir.</p>
+          <p>Projede Google Mobile Ads Next-Gen SDK 1.6.0 ve Google User Messaging Platform (UMP) 4.0.0 bulunur. İncelenen 0.3.1 geliştirmesinde debug, QA ve açıkça etiketlenmiş dahili önizleme yapılandırmaları Google’ın örnek reklam kimliklerini kullanır. UMP kontrolünden sonra reklam isteğine izin verildiğinde SDK başlatılabilir; ana sayfa ve favorilerde test banner reklamı istenebilir. Aktif pişirme, zamanlayıcı veya sesli anlatım sırasında banner uygunluğu engellenir. Test kimliklerinin bulunması, reklamın her cihazda başarıyla yüklendiği anlamına gelmez.</p>
+          <p>Varsayılan release yapılandırmasında canlı reklamlar kapalıdır ve yalnız bir derleme parametresiyle açılamaz. Pişsek?’e ait gerçek AdMob uygulama ve banner kimlikleri üretim yapılandırmasında ayrı tutulur; geliştirme, QA ve dahili önizleme paketleri yalnız Google test kimliklerini kullanır. Normal Rewarded üretim kimliği henüz yapılandırılmamıştır. Verilen farklı bir kimlik Rewarded Interstitial türündedir; bu özellik kapalıdır ve normal Rewarded API’sine verilmez. Etkin bir ödül ürünü veya reklam izleme düğmesi yoktur. Gerçek reklam trafiği için ayrıca yayıncı onayı ve gerekli yayın/gizlilik kontrolleri gerekir.</p>
           <p>Reklam SDK’sı, test istekleri dahil çalıştığında IP adresini ve bundan çıkarılabilen yaklaşık konumu, uygulama/reklam etkileşimlerini, tanılama verilerini ve yapılandırmaya bağlı cihaz veya bazı hesap tanımlayıcılarını reklam sunumu, ölçüm ve sahtekârlığı önleme amacıyla işleyebilir veya paylaşabilir. İncelenen manifest Android 13+ için <code>AD_ID</code> ve kullanılmayan AdServices/konum izinlerini kaldırır. Bu, eski Android sürümlerinde reklam kimliği veya app set ID gibi diğer tanımlayıcılar dahil tüm teknik veri işlemenin durduğu anlamına gelmez. SDK’nın isteğe bağlı kendi crash reporting özelliği kapalıdır; tüm tanılama kapatılmış sayılmaz. Google’ın açıklamasına göre SDK veri aktarımı TLS kullanır. Ayrıntılar için <a href="https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure">Google Mobile Ads veri açıklamalarını</a> inceleyebilirsiniz.</p>
           <p>Üretim reklamları etkinleştirilmeden önce gerçek sürümün veri akışları, izinleri, UMP seçenekleri ve Google Play Veri güvenliği beyanı birlikte doğrulanmalıdır. Bu politika, üçüncü taraf SDK’lar dahil tüm uygulama için “hiç veri toplanmaz” güvencesi vermez.</p>
         </section>
